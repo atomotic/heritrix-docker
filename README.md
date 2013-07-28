@@ -39,4 +39,8 @@ docker container with webarchiving crawler **heritrix-3.1.2-SNAPSHOT**
   * https://github.com/alard/warc-proxy
   * wget-lua from archiveteam
   * https://github.com/alard/warctozip
+  * https://github.com/ukwa/warc-explorer
+  * https://github.com/martinsbalodis/warc-content
+  * https://github.com/ianmilligan1/Historian-WARC-1
+  * https://github.com/alard/megawarc
   
