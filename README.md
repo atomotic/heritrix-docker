@@ -13,7 +13,7 @@ docker container with webarchiving crawler **heritrix-3.1.2-SNAPSHOT**
 
 		mkdir jobs
 
-- run the container exposing the private port 8443 port to host port 8443 
+- run the container exposing the container port 8443 to host port 8443 
 
 		docker run -d -p :8443 -v $(pwd)/jobs:/opt/heritrix/jobs atomotic/heritrix heritrix-start.sh
 
