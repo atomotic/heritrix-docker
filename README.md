@@ -1,36 +1,30 @@
 heritrix-docker
 ===============
 
-docker container with webarchiving crawler **heritrix-3.1.2-SNAPSHOT**
+docker container with #webarchiving crawler **heritrix-3.2.0**
 
 ### run
 
-- pull the image
+- build
  
-		docker pull atomotic/heritrix
+		docker build -t atomotic/heritrix github.com/atomotic/heritrix-docker
 
-- create a persistent job directory
+- create a persistent job directory on the host
 
 		mkdir jobs
 
-- run the container exposing the container port 8443 to host port 8443 
+- run the container on host:8443
 
-		docker run -d -p :8443 -v $(pwd)/jobs:/opt/heritrix/jobs atomotic/heritrix heritrix-start.sh
+		docker run -d -p 8443:8443 -v $(pwd)/jobs:/opt/heritrix-3.2.0/jobs atomotic/heritrix heritrix-start.sh
 
 - access the web interface
 
 		open https://localhost:8443
 	
-	* user **admin**
-	* password **h3**
+	* user **heritrix**
+	* password **heritrix**
 
 
-### build (if you want to build yourself the image)
-
-	git clone https://github.com/atomotic/heritrix-docker
-	docker build .
-	
-	
 #### TODO
 - improve the basic job crawler-beans.cxml (specify external seeds.txt file)
 - add utilities to deal with warc files
